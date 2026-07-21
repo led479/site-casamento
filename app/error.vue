@@ -9,9 +9,9 @@
       Verifique se o endereço está correto ou entre em contato com os noivos.
     </p>
 
-    <Button @click="handleError">
+    <button @click="handleError">
       Voltar ao início
-    </Button>
+    </button>
   </div>
 </template>
 

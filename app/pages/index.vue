@@ -6,31 +6,31 @@
     </section>
 
     <section v-if="pessoas.length > 0" class="w-full px-4">
-      <Card w-full max-w-md>
+      <div w-full max-w-md>
         <form class="px-4">
-          <FieldGroup>
-            <FieldSet>
-              <FieldLegend variant="label">
+          <div>
+            <div>
+              <div variant="label">
                 Quem vai no casamento?
-              </FieldLegend>
-              <FieldDescription>
+              </div>
+              <div>
                 Selecione quem vai no casamento.
-              </FieldDescription>
-                <FieldGroup class="gap-3">
-                  <Field v-for="pessoa in pessoas" :key="pessoa.nome" orientation="horizontal">
-                    <Checkbox :id="`convidado-${pessoa.nome}`" v-model="pessoa.vai" />
-                    <FieldLabel :for="`convidado-${pessoa.nome}`" class="font-normal">
+              </div>
+                <div class="gap-3">
+                  <div v-for="pessoa in pessoas" :key="pessoa.nome" orientation="horizontal">
+                    <input type="checkbox" :id="`convidado-${pessoa.nome}`" v-model="pessoa.vai" />
+                    <label :for="`convidado-${pessoa.nome}`" class="font-normal">
                       {{ pessoa.nome }}
-                    </FieldLabel>
-                  </Field>
-              </FieldGroup>
-            </FieldSet>
-            <Button type="submit">
+                    </label>
+                  </div>
+              </div>
+            </div>
+            <button type="submit">
               Confirmar
-            </Button>
-          </FieldGroup>
+            </button>
+          </div>
         </form>
-      </Card>
+      </div>
     </section>
     <section v-else>
       não há convidados/url bugada
