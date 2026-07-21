@@ -8,27 +8,27 @@
     <section v-if="pessoas.length > 0" class="w-full px-4">
       <div w-full max-w-md>
         <form class="px-4">
-          <div>
-            <div>
-              <div variant="label">
+          <FieldGroup>
+            <FieldSet>
+              <FieldLegend variant="label">
                 Quem vai no casamento?
-              </div>
-              <div>
+              </FieldLegend>
+              <FieldDescription>
                 Selecione quem vai no casamento.
-              </div>
-                <div class="gap-3">
-                  <div v-for="pessoa in pessoas" :key="pessoa.nome" orientation="horizontal">
-                    <input type="checkbox" :id="`convidado-${pessoa.nome}`" v-model="pessoa.vai" />
-                    <label :for="`convidado-${pessoa.nome}`" class="font-normal">
-                      {{ pessoa.nome }}
-                    </label>
-                  </div>
-              </div>
-            </div>
-            <button type="submit">
+              </FieldDescription>
+              <FieldGroup class="gap-3">
+                <Field v-for="pessoa in pessoas" :key="pessoa.nome" orientation="horizontal">
+                  <Checkbox :id="`convidado-${pessoa.nome}`" v-model="pessoa.vai" />
+                  <FieldLabel :for="`convidado-${pessoa.nome}`" class="font-normal">
+                    {{ pessoa.nome }}
+                  </FieldLabel>
+                </Field>
+              </FieldGroup>
+            </FieldSet>
+            <Button type="submit">
               Confirmar
-            </button>
-          </div>
+            </Button>
+          </FieldGroup>
         </form>
       </div>
     </section>
@@ -42,6 +42,9 @@
 import Logo from '~/assets/logo.svg'
 import MainBg from '~/assets/images/main-bg.png'
 import type { PessoaPresenca } from '~/types/convidados'
+import Button from '~/components/ui/button/Button.vue'
+import { Field, FieldDescription, FieldGroup, FieldLabel, FieldLegend, FieldSet } from '~/components/ui/field'
+import { Checkbox } from '~/components/ui/checkbox'
 
 const { $supabase } = useNuxtApp()
 const route = useRoute()
