@@ -5,7 +5,7 @@
       <Logo class="size-80 z-10" />
     </section>
 
-    <section class="w-full px-4">
+    <section v-if="pessoas.length > 0" class="w-full px-4">
       <Card w-full max-w-md>
         <form class="px-4">
           <FieldGroup>
@@ -32,35 +32,42 @@
         </form>
       </Card>
     </section>
+    <section v-else>
+      não há convidados/url bugada
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
 import Logo from '~/assets/logo.svg'
 import MainBg from '~/assets/images/main-bg.png'
+import type { PessoaPresenca } from '~/types/convidados'
 
 const { $supabase } = useNuxtApp()
+const route = useRoute()
 
-const value = useRoute().query.convidado
+const convidado = computed(() => {
+  const value = route.query.convidado
+  if (Array.isArray(value)) {
+    return value[0] ?? ''
+  }
+  return value ?? ''
+})
 
-const convidado = String(Array.isArray(value) ? value[0] : value ?? '')
-const grupo = buscarGrupo(convidado)
+const grupo = computed(() => buscarGrupo(convidado.value))
 
-console.log('grupo', grupo)
-
-
-if (!grupo) {
+if (convidado.value && !grupo.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'Convite não encontrado'
+    statusMessage: 'Convite não encontrado',
   })
 }
 
-const pessoas = reactive(
-  grupo.convidados.map(({ nome }) => ({
+const pessoas = ref<PessoaPresenca[]>(
+  grupo.value?.convidados.map(({ nome }) => ({
     nome,
     vai: true,
-  }))
+  })) ?? [],
 )
 
 const form = reactive({

@@ -5,3 +5,8 @@ export interface Convidado {
 export interface GrupoConvidados {
   convidados: Convidado[]
 }
+
+export interface PessoaPresenca {
+  nome: string
+  vai: boolean
+}
