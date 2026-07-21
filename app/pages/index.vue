@@ -1,32 +1,38 @@
 <template>
-  <div class="card flex flex-col items-center m-4 p-4 gap-4">
+  <div class="flex flex-col items-center gap-4">
+    <section class="flex items-center justify-center relative overflow-hidden h-80 w-full">
+      <img :src="MainBg" class="absolute h-full w-full object-cover" >
+      <Logo class="size-80 z-10" />
+    </section>
     <h1>Nosso Casamento 💍</h1>
 
-    <div v-if="!enviado" class="flex flex-col w-full gap-4">
-      <h2>Confirme sua presença</h2>
-
-      <Label>Seu nome</Label>
-      <Input v-model="form.nome" class="input" placeholder="Nome completo" />
-
-      <Label>
-        <Checkbox v-model="form.vai_comparecer" type="checkbox" />
-        Vou comparecer
-      </Label>
-
-      <Label>Quantas pessoas?</Label>
-      <Input v-model.number="form.qtd_pessoas" type="number" min="1" />
-
-      <Label>Restrição alimentar (opcional)</Label>
-      <Input v-model="form.restricao_alimentar" />
-
-      <Label>Mensagem para os noivos (opcional)</Label>
-      <Textarea v-model="form.mensagem" />
-
-      <Button :disabled="enviando || !form.nome" @click="confirmar">
-        {{ enviando ? "Enviando..." : "Confirmar presença" }}
-      </Button>
-
-      <p v-if="erro" style="color: red">{{ erro }}</p>
+    <div v-if="!enviado" class="px-4 w-full">
+      <Card  class="flex flex-col w-full gap-4 px-4">
+        <h2>Confirme sua presença</h2>
+  
+        <Label>Seu nome</Label>
+        <Input v-model="form.nome" class="input" placeholder="Nome completo" />
+  
+        <Label>
+          <Checkbox v-model="form.vai_comparecer" type="checkbox" />
+          Vou comparecer
+        </Label>
+  
+        <Label>Quantas pessoas?</Label>
+        <Input v-model.number="form.qtd_pessoas" type="number" min="1" />
+  
+        <Label>Restrição alimentar (opcional)</Label>
+        <Input v-model="form.restricao_alimentar" />
+  
+        <Label>Mensagem para os noivos (opcional)</Label>
+        <Textarea v-model="form.mensagem" />
+  
+        <Button :disabled="enviando || !form.nome" @click="confirmar">
+          {{ enviando ? "Enviando..." : "Confirmar presença" }}
+        </Button>
+  
+        <p v-if="erro" style="color: red">{{ erro }}</p>
+      </Card>
     </div>
 
     <div v-else>
@@ -38,6 +44,9 @@
 
 <script setup>
 import { createClient } from "@supabase/supabase-js";
+import Logo from '~/assets/logo.svg'
+import MainBg from '~/assets/images/main-bg.png'
+
 const config = useRuntimeConfig();
 const supabase = createClient(
   config.public.supabaseUrl,
