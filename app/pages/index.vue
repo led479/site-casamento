@@ -1,44 +1,37 @@
 <template>
   <div class="flex flex-col items-center gap-4">
-    <section class="flex items-center justify-center relative overflow-hidden h-80 w-full">
-      <img :src="MainBg" class="absolute h-full w-full object-cover" >
+    <section class="flex items-center justify-center relative overflow-hidden h-screen w-full">
+      <img :src="MainBg" class="absolute h-full w-full object-cover">
       <Logo class="size-80 z-10" />
     </section>
-    <h1>Nosso Casamento 💍</h1>
 
-    <div v-if="!enviado" class="px-4 w-full">
-      <Card  class="flex flex-col w-full gap-4 px-4">
-        <h2>Confirme sua presença</h2>
-  
-        <Label>Seu nome</Label>
-        <Input v-model="form.nome" class="input" placeholder="Nome completo" />
-  
-        <Label>
-          <Checkbox v-model="form.vai_comparecer" type="checkbox" />
-          Vou comparecer
-        </Label>
-  
-        <Label>Quantas pessoas?</Label>
-        <Input v-model.number="form.qtd_pessoas" type="number" min="1" />
-  
-        <Label>Restrição alimentar (opcional)</Label>
-        <Input v-model="form.restricao_alimentar" />
-  
-        <Label>Mensagem para os noivos (opcional)</Label>
-        <Textarea v-model="form.mensagem" />
-  
-        <Button :disabled="enviando || !form.nome" @click="confirmar">
-          {{ enviando ? "Enviando..." : "Confirmar presença" }}
-        </Button>
-  
-        <p v-if="erro" style="color: red">{{ erro }}</p>
+    <section class="w-full px-4">
+      <Card w-full max-w-md>
+        <form class="px-4">
+          <FieldGroup>
+            <FieldSet>
+              <FieldLegend variant="label">
+                Quem vai no casamento?
+              </FieldLegend>
+              <FieldDescription>
+                Selecione quem vai no casamento.
+              </FieldDescription>
+                <FieldGroup class="gap-3">
+                  <Field v-for="pessoa in pessoas" :key="pessoa.nome" orientation="horizontal">
+                    <Checkbox :id="`convidado-${pessoa.nome}`" v-model="pessoa.vai" />
+                    <FieldLabel :for="`convidado-${pessoa.nome}`" class="font-normal">
+                      {{ pessoa.nome }}
+                    </FieldLabel>
+                  </Field>
+              </FieldGroup>
+            </FieldSet>
+            <Button type="submit">
+              Confirmar
+            </Button>
+          </FieldGroup>
+        </form>
       </Card>
-    </div>
-
-    <div v-else>
-      <h2>Obrigado, {{ form.nome }}! 🎉</h2>
-      <p>Sua confirmação foi registrada.</p>
-    </div>
+    </section>
   </div>
 </template>
 
