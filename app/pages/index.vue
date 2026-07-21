@@ -2,29 +2,29 @@
   <div class="card flex flex-col items-center m-4 p-4 gap-4">
     <h1>Nosso Casamento 💍</h1>
 
-    <div v-if="!enviado" class="flex flex-col w-full">
+    <div v-if="!enviado" class="flex flex-col w-full gap-4">
       <h2>Confirme sua presença</h2>
 
-      <label>Seu nome</label>
-      <input v-model="form.nome" class="input" placeholder="Nome completo" >
+      <Label>Seu nome</Label>
+      <Input v-model="form.nome" class="input" placeholder="Nome completo" />
 
-      <label>
-        <input v-model="form.vai_comparecer" type="checkbox" >
+      <Label>
+        <Checkbox v-model="form.vai_comparecer" type="checkbox" />
         Vou comparecer
-      </label>
+      </Label>
 
-      <label>Quantas pessoas?</label>
-      <input v-model.number="form.qtd_pessoas" type="number" min="1" >
+      <Label>Quantas pessoas?</Label>
+      <Input v-model.number="form.qtd_pessoas" type="number" min="1" />
 
-      <label>Restrição alimentar (opcional)</label>
-      <input v-model="form.restricao_alimentar" >
+      <Label>Restrição alimentar (opcional)</Label>
+      <Input v-model="form.restricao_alimentar" />
 
-      <label>Mensagem para os noivos (opcional)</label>
-      <textarea v-model="form.mensagem" />
+      <Label>Mensagem para os noivos (opcional)</Label>
+      <Textarea v-model="form.mensagem" />
 
-      <button :disabled="enviando || !form.nome" @click="confirmar">
+      <Button :disabled="enviando || !form.nome" @click="confirmar">
         {{ enviando ? "Enviando..." : "Confirmar presença" }}
-      </button>
+      </Button>
 
       <p v-if="erro" style="color: red">{{ erro }}</p>
     </div>
