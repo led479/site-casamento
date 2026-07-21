@@ -42,16 +42,34 @@
   </div>
 </template>
 
-<script setup>
-import { createClient } from "@supabase/supabase-js";
+<script setup lang="ts">
 import Logo from '~/assets/logo.svg'
 import MainBg from '~/assets/images/main-bg.png'
 
-const config = useRuntimeConfig();
-const supabase = createClient(
-  config.public.supabaseUrl,
-  config.public.supabasePublishableKey,
-);
+const { $supabase } = useNuxtApp()
+
+const value = useRoute().query.convidado
+
+const convidado = String(Array.isArray(value) ? value[0] : value ?? '')
+const grupo = buscarGrupo(convidado)
+
+console.log('grupo', grupo)
+
+
+if (!grupo) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Convite não encontrado'
+  })
+}
+
+const pessoas = reactive(
+  grupo.convidados.map(({ nome }) => ({
+    nome,
+    vai: true,
+  }))
+)
+
 const form = reactive({
   nome: "",
   vai_comparecer: true,
@@ -68,7 +86,7 @@ async function confirmar() {
   enviando.value = true;
   erro.value = "";
 
-  const { error } = await supabase.from("rsvp").insert({
+  const { error } = await $supabase.from("rsvp").insert({
     nome: form.nome,
     vai_comparecer: form.vai_comparecer,
     qtd_pessoas: form.qtd_pessoas,
