@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       supabasePublishableKey: '',
     },
   },
-  css: ['./app/assets/css/main.css'],
+  css: ['~/assets/css/main.css'],
   nitro: {
     preset: 'static'
   },
