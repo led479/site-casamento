@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-zinc-900 antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  * {
+    @apply border-zinc-200;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    @apply block max-w-full;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply outline-none;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+
+  h3 {
+    @apply text-xl font-semibold;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+}
+
+@layer components {
+  .page {
+    @apply mx-auto w-full max-w-screen-md px-5;
+  }
+
+  .section {
+    @apply py-16;
+  }
+
+  .card {
+    @apply rounded-2xl border bg-white shadow-sm;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-medium transition;
+  }
+
+  .btn-primary {
+    @apply bg-zinc-900 text-white hover:bg-zinc-800;
+  }
+
+  .btn-secondary {
+    @apply bg-zinc-100 hover:bg-zinc-200;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

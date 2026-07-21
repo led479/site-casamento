@@ -1,3 +1,5 @@
+import tailwindcss from "@tailwindcss/vite"
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -8,7 +10,19 @@ export default defineNuxtConfig({
       supabasePublishableKey: '',
     },
   },
+  css: ['./app/assets/css/main.css'],
   nitro: {
     preset: 'static'
-  }
+  },
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@supabase/supabase-js',
+      ]
+    },
+    plugins: [
+      tailwindcss(),
+    ],
+  },
+  modules: ['@nuxt/eslint'],
 })
