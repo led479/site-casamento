@@ -50,7 +50,10 @@ const { $supabase } = useNuxtApp()
 const route = useRoute()
 
 const convidado = computed(() => {
+  console.log('computed convidado', route.query, route, route.query.convidado)
   const value = route.query.convidado
+  console.log('computed convidado value',value)
+
   if (Array.isArray(value)) {
     return value[0] ?? ''
   }
