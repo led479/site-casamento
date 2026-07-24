@@ -121,6 +121,7 @@
   html,
   body {
     overscroll-behavior: none;
-    @apply bg-background text-foreground;
+    background-color: transparent;
+    @apply text-foreground;
   }
 }
