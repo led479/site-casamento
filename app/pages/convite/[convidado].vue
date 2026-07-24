@@ -1,5 +1,11 @@
 <template>
   <div class="flex flex-col items-center">
+    <!-- Faixa fixa que cobre a status bar do Safari com a cor da imagem -->
+    <div
+      class="fixed top-0 left-0 right-0 z-50"
+      :style="{ height: 'env(safe-area-inset-top)', backgroundColor: '#7a8f96' }"
+    />
+
     <section
       v-if="grupo"
       class="flex flex-col items-center justify-between w-full min-h-dvh bg-cover bg-center px-4 pb-[calc(env(safe-area-inset-bottom)+2.5rem)] pt-[calc(env(safe-area-inset-top)+2.5rem)]"
