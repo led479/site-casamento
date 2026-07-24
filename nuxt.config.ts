@@ -15,6 +15,12 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'static'
   },
+  components: [
+    {
+      path: '~/components',
+      extensions: ['.vue'],
+    },
+  ],
   vite: {
     optimizeDeps: {
       include: [
