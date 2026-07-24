@@ -17,7 +17,7 @@
         </FieldDescription>
         <FieldGroup class="gap-3">
           <Field v-for="pessoa in pessoas" :key="pessoa.nome" orientation="horizontal">
-            <Checkbox :id="`convidado-${pessoa.nome}`" v-model="pessoa.vai" />
+            <Checkbox :id="`convidado-${pessoa.nome}`" v-model="pessoa.vai" :disabled="enviado" />
             <FieldLabel :for="`convidado-${pessoa.nome}`" class="font-normal">
               {{ pessoa.nome }}
             </FieldLabel>
@@ -31,8 +31,8 @@
         {{ erro }}
       </p>
       <div v-if="enviado" class="flex flex-col gap-1">
-        <p class="text-green-600">
-          Presença confirmada! Muito obrigado! 🎉
+        <p class="text-neutral-500 font-semibold">
+          Presença confirmada! Muito obrigado!
         </p>
       </div>
       <Button v-if="!enviado" type="submit" size="lg" :disabled="enviando">
