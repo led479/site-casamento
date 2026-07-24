@@ -1,14 +1,12 @@
 <template>
-  <div class="flex flex-col items-center gap-4 pb-10">
-    <section class="flex items-center justify-center relative overflow-hidden h-screen w-full">
-      <img :src="MainBg" class="absolute h-full w-full object-cover">
-      <Logo class="size-80 z-10" />
-    </section>
-
-    <section v-if="grupo" class="w-full px-4">
-      <div w-full max-w-md>
-        <DrawerConfirmar :nome-grupo="convidado" :convidados="grupo.convidados" />
-      </div>
+  <div class="flex flex-col items-center">
+    <section
+      v-if="grupo"
+      class="flex flex-col items-center justify-between w-full min-h-screen bg-cover bg-center py-10 px-4"
+      :style="{ backgroundImage: `url(${MainBg})` }"
+    >
+      <Logo class="size-80" />
+      <DrawerConfirmar :nome-grupo="convidado" :convidados="grupo.convidados" />
     </section>
     <section v-else>
       não há convidados/url bugada

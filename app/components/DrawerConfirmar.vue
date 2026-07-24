@@ -2,7 +2,7 @@
 <template>
   <Drawer>
     <DrawerTrigger as-child>
-      <Button variant="outline">
+      <Button variant="outline" size="lg">
         Confirmar presença
       </Button>
     </DrawerTrigger>
