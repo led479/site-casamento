@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center">
     <section
       v-if="grupo"
-      class="flex flex-col items-center justify-between w-full min-h-screen bg-cover bg-center px-4 pb-10 pt-[calc(env(safe-area-inset-top)+2.5rem)]"
+      class="flex flex-col items-center justify-between w-full min-h-dvh bg-cover bg-center px-4 pb-[calc(env(safe-area-inset-bottom)+2.5rem)] pt-[calc(env(safe-area-inset-top)+2.5rem)]"
       :style="{ backgroundImage: `url(${MainBg})` }"
     >
       <Logo class="size-80" />
