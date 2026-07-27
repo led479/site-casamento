@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import Logo from '~/assets/logo.svg'
-import MainBg from '~/assets/images/main-bg.png'
+import MainBg from '~/assets/images/main-bg.webp'
 
 const route = useRoute()
 
