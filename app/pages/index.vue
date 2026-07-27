@@ -3,5 +3,6 @@
     <SectionHero />
     <SectionIntro />
     <SectionIgreja />
+    <SectionRestaurante />
   </div>
 </template>
