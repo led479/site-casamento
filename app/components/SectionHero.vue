@@ -1,8 +1,12 @@
 <template>
   <section
     class="relative flex flex-col items-center justify-center w-full min-h-screen bg-cover bg-center px-4 text-hero-light-orange"
-    :style="{ backgroundImage: `url(${MainBg})` }"
+    :style="imageLoaded ? { backgroundImage: `url(${MainBg})` } : {}"
   >
+    <Transition name="fade">
+      <AppLoader v-if="!imageLoaded" />
+    </Transition>
+
     <div class="flex flex-col">
       <Logo class="w-80" />
       <h2 class="-translate-y-5">TE CONVIDAM PARA O SEU CASAMENTO</h2>
@@ -11,8 +15,30 @@
   </section>
 </template>
 
-
 <script setup lang="ts">
 import Logo from '~/assets/logo.svg'
 import MainBg from '~/assets/images/main-bg.png'
+
+const imageLoaded = ref(false)
+
+onMounted(() => {
+  const img = new Image()
+  img.src = MainBg
+  img.onload = () => {
+    imageLoaded.value = true
+  }
+  img.onerror = () => {
+    imageLoaded.value = true
+  }
+})
 </script>
+
+<style scoped>
+.fade-leave-active {
+  transition: opacity 0.6s ease;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
