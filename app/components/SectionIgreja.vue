@@ -5,7 +5,7 @@
     <div class="flex flex-col items-center gap-10">
       <div class="flex flex-col items-center gap-4">
         <IgrejaTitulo class="w-80 h-16" />
-        <img :src="IgrejaDesenho" alt="Desenho da Igreja" >
+        <img :src="IgrejaDesenho" alt="Desenho da Igreja" class="max-w-[400px]" >
       </div>
       <div class="flex flex-col items-center text-center px-10 gap-5 leading-tight">
         <p class="font-heading font-semibold">Igreja Puríssimo Coração de Maria</p>
