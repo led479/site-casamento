@@ -8,8 +8,8 @@
           <img :src="Flores" alt="Logo da Intro" class="w-10" >
           <InfoTitulo class="w-48 h-7" />
         </div>
-        <div class="flex flex-col gap-3 px-4">
-          <p>Alguns detalhes para o seu conforto:</p>
+        <div class="flex flex-col gap-3 px-8">
+          <p class="text-nowrap">Alguns detalhes para o seu conforto:</p>
           <p class="font-heading font-semibold">Traje: Social / Esporte fino</p>
           <p>Nossa celebração não foi preparada para receber crianças.<br> Agradecemos a compreensão e o carinho de todos.</p>
         </div>
