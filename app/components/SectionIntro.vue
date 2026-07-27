@@ -15,6 +15,6 @@
 
 
 <script setup lang="ts">
-import IntroLogo from '~/assets/images/intro-logo.png'
-import IntroBg from '~/assets/images/intro-bg.png'
+import IntroLogo from '~/assets/images/intro-logo.webp'
+import IntroBg from '~/assets/images/intro-bg.webp'
 </script>
