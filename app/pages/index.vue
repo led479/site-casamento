@@ -4,5 +4,6 @@
     <SectionIntro />
     <SectionIgreja />
     <SectionRestaurante />
+    <SectionInfo />
   </div>
 </template>
