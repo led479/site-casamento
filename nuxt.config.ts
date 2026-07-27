@@ -42,5 +42,5 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ['@nuxt/eslint', '@vercel/analytics']
+  modules: ['@nuxt/eslint', '@vercel/analytics', '@vercel/speed-insights']
 })
