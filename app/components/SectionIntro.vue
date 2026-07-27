@@ -1,8 +1,8 @@
 <template>
   <section
-    class="relative flex flex-col items-center justify-center w-full h-screen bg-cover px-8 py-14 bg-center text-intro-dark-gray-brown bg-intro-light-orange"
+    class="relative flex flex-col items-center justify-center w-full min-h-screen px-8 py-14 text-intro-dark-gray-brown bg-intro-light-orange"
   >
-    <div class="flex flex-col items-center justify-center h-full w-full bg-contain bg-no-repeat bg-center px-20 text-center max-w-sm" :style="{ backgroundImage: `url(${IntroBg})` }">
+    <div class="flex flex-col items-center justify-center h-full w-full bg-contain bg-no-repeat bg-center px-20 text-center max-w-sm min-h-[651px]" :style="{ backgroundImage: `url(${IntroBg})` }">
       <div class="flex flex-col items-center gap-10 leading-tight text-sm">
         <img :src="IntroLogo" alt="Logo da Intro" class="w-20" >
         <p>Estamos muito felizes em compartilhar este momento tão especial com você.</p>
