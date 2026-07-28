@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative flex flex-col items-center justify-center w-full min-h-[calc(100dvh-2.5rem)] bg-cover bg-center px-4 text-hero-light-orange"
+    class="relative flex flex-col items-center justify-center w-full min-h-[calc(100svh-1rem)] bg-cover bg-center px-4 text-hero-light-orange"
     :style="imageLoaded ? { backgroundImage: `url(${MainBg})` } : {}"
   >
     <Transition name="fade">
