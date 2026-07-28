@@ -6,7 +6,7 @@
       <div class="flex flex-col items-center h-full justify-between min-h-[400px]">
 
         <img :src="IntroLogo" alt="Logo da Intro" class="w-20" >
-        <div class="flex flex-col items-center gap-7 leading-tight text-sm">
+        <div class="flex flex-col items-center gap-7 leading-tight text-sm max-w-[162px]">
           <p>Estamos muito felizes em compartilhar este momento tão especial com você.</p>
           <p>Depois de tantos momentos vividos juntos, chegou a hora de celebrar o início de um novo capítulo das nossas vidas.</p>
           <p>Será uma alegria ter sua presença nesse dia tão importante.</p>
