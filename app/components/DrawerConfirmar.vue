@@ -1,11 +1,5 @@
-
 <template>
-  <Drawer>
-    <DrawerTrigger as-child>
-      <Button variant="outline" size="lg">
-        Confirmar presença
-      </Button>
-    </DrawerTrigger>
+  <Drawer :open="open" @update:open="$emit('update:open', $event)">
     <DrawerContent>
       <div class="h-[80vh] pb-10 pt-5">
         <FormConfirmar v-bind="{ nomeGrupo, convidados }" />
@@ -15,16 +9,18 @@
 </template>
 
 <script setup lang="ts">
-import { Button } from '@/components/ui/button'
 import {
   Drawer,
   DrawerContent,
-  DrawerTrigger,
 } from '@/components/ui/drawer'
 
 defineProps<{
+  open: boolean
   nomeGrupo: string
   convidados: { nome: string }[]
 }>()
 
+defineEmits<{
+  'update:open': [value: boolean]
+}>()
 </script>

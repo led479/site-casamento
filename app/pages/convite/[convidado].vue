@@ -12,9 +12,13 @@
           v-if="scrolled"
           class="fixed bottom-0 left-0 right-0 flex justify-center pb-[calc(env(safe-area-inset-bottom)+1.25rem)] z-50"
         >
-          <DrawerConfirmar :nome-grupo="convidado" :convidados="grupo.convidados" />
+          <Button variant="outline" size="lg" @click="drawerOpen = true">
+            Confirmar presença
+          </Button>
         </div>
       </Transition>
+
+      <DrawerConfirmar v-model:open="drawerOpen" :nome-grupo="convidado" :convidados="grupo.convidados" />
     </template>
     <section v-else>
       não há convidados/url bugada
@@ -23,6 +27,8 @@
 </template>
 
 <script setup lang="ts">
+import { Button } from '@/components/ui/button'
+
 const route = useRoute()
 
 const convidado = computed(() => {
@@ -41,6 +47,7 @@ if (convidado.value && !grupo.value) {
 }
 
 const scrolled = ref(false)
+const drawerOpen = ref(false)
 
 onMounted(() => {
   window.addEventListener('scroll', () => {
