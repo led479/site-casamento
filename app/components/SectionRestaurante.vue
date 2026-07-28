@@ -5,7 +5,7 @@
     <div class="flex flex-col items-center gap-10">
       <div class="flex flex-col items-center gap-4">
         <RestauranteTitulo class="w-80 h-16" />
-        <img :src="RestauranteDesenho" alt="Desenho do Restaurante" class="max-w-[400px]" >
+        <img :src="RestauranteDesenho" alt="Desenho do Restaurante" class="max-w-[400px] w-full" >
       </div>
       <div class="flex flex-col items-center text-center px-10 gap-5 leading-tight">
         <p class="font-heading font-semibold">Empório Capella Restaurante</p>
