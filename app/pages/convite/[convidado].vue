@@ -1,19 +1,21 @@
 <template>
   <div class="flex flex-col items-center">
-    <!-- Faixa fixa que cobre a status bar do Safari com a cor da imagem -->
-    <div
-      class="fixed top-0 left-0 right-0 z-50"
-      :style="{ height: 'env(safe-area-inset-top)', backgroundColor: '#7a8f96' }"
-    />
+    <template v-if="grupo">
+      <SectionHero />
+      <SectionIntro />
+      <SectionIgreja />
+      <SectionRestaurante />
+      <SectionInfo />
 
-    <section
-      v-if="grupo"
-      class="flex flex-col items-center justify-between w-full min-h-dvh bg-cover bg-center px-4 pb-[calc(env(safe-area-inset-bottom)+2.5rem)] pt-[calc(env(safe-area-inset-top)+2.5rem)]"
-      :style="{ backgroundImage: `url(${MainBg})` }"
-    >
-      <Logo class="size-80" />
-      <DrawerConfirmar :nome-grupo="convidado" :convidados="grupo.convidados" />
-    </section>
+      <Transition name="slide-up">
+        <div
+          v-if="scrolled"
+          class="fixed bottom-0 left-0 right-0 flex justify-center pb-[calc(env(safe-area-inset-bottom)+1.25rem)] z-50"
+        >
+          <DrawerConfirmar :nome-grupo="convidado" :convidados="grupo.convidados" />
+        </div>
+      </Transition>
+    </template>
     <section v-else>
       não há convidados/url bugada
     </section>
@@ -21,9 +23,6 @@
 </template>
 
 <script setup lang="ts">
-import Logo from '~/assets/logo.svg'
-import MainBg from '~/assets/images/main-bg.webp'
-
 const route = useRoute()
 
 const convidado = computed(() => {
@@ -40,4 +39,25 @@ if (convidado.value && !grupo.value) {
     statusMessage: 'Convite não encontrado',
   })
 }
+
+const scrolled = ref(false)
+
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    scrolled.value = window.scrollY > 80
+  }, { passive: true })
+})
 </script>
+
+<style scoped>
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(1.5rem);
+  opacity: 0;
+}
+</style>
