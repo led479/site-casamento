@@ -34,6 +34,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      title: 'Giulia & Rolf',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
         { name: 'theme-color', content: '#faf1e1' }
