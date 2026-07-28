@@ -10,7 +10,8 @@
       <Transition name="slide-up">
         <div
           v-if="scrolled"
-          class="fixed bottom-0 left-0 right-0 flex justify-center pb-[calc(env(safe-area-inset-bottom)+1.25rem)] z-50"
+          class="fixed bottom-0 left-0 right-0 flex flex-col items-center pb-[calc(env(safe-area-inset-bottom)+1.25rem)] pt-10 z-50"
+          style="background: linear-gradient(to bottom, transparent 0%, color-mix(in srgb, var(--color-hero-light-orange) 10%, transparent) 30%, color-mix(in srgb, var(--color-hero-light-orange) 60%, transparent) 65%, var(--color-hero-light-orange) 100%);"
         >
           <Button variant="outline" size="lg" @click="drawerOpen = true">
             Confirmar presença
