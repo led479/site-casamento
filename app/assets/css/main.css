@@ -141,7 +141,7 @@
   }
   html,
   body {
-    background-color: transparent;
+    background-color: var(--color-hero-light-orange);
     @apply text-foreground;
   }
 }
