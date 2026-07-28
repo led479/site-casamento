@@ -14,12 +14,17 @@
           style="background: linear-gradient(to bottom, transparent 0%, color-mix(in srgb, var(--color-hero-light-orange) 10%, transparent) 30%, color-mix(in srgb, var(--color-hero-light-orange) 60%, transparent) 65%, var(--color-hero-light-orange) 100%);"
         >
           <Button variant="outline" class="w-full max-w-sm" size="lg" @click="drawerOpen = true">
-            Confirmar presença
+            {{ jaRespondeu ? 'Atualizar presença' : 'Confirmar presença' }}
           </Button>
         </div>
       </Transition>
 
-      <DrawerConfirmar v-model:open="drawerOpen" :nome-grupo="convidado" :convidados="grupo.convidados" />
+      <DrawerConfirmar
+        v-model:open="drawerOpen"
+        :nome-grupo="convidado"
+        :convidados="grupo.convidados"
+        @ja-respondeu="jaRespondeu = $event"
+      />
     </template>
     <section v-else>
       não há convidados/url bugada
@@ -49,6 +54,7 @@ if (convidado.value && !grupo.value) {
 
 const scrolled = ref(false)
 const drawerOpen = ref(false)
+const jaRespondeu = ref(false)
 
 onMounted(() => {
   window.addEventListener('scroll', () => {

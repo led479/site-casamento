@@ -66,6 +66,11 @@ const erro = ref('')
 const enviando = ref(false)
 const carregando = ref(true)
 
+const emit = defineEmits<{
+  success: [atualizado: boolean]
+  jaRespondeu: [value: boolean]
+}>()
+
 onMounted(async () => {
   const { data: respostasExistentes } = await $supabase
     .from('rsvp')
@@ -74,6 +79,7 @@ onMounted(async () => {
 
   if (respostasExistentes && respostasExistentes.length > 0) {
     jaRespondeu.value = true
+    emit('jaRespondeu', true)
     pessoas.value = pessoas.value.map(pessoa => {
       const salvo = respostasExistentes.find(r => r.nome === pessoa.nome)
       return salvo ? { ...pessoa, vai: salvo.confirmado } : pessoa
@@ -105,5 +111,6 @@ async function confirmar() {
   }
 
   enviado.value = true
+  emit('success', jaRespondeu.value)
 }
 </script>
