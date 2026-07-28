@@ -3,11 +3,14 @@
     class="relative flex flex-col items-center justify-center w-full min-h-screen px-8 py-14 text-intro-dark-gray-brown bg-intro-light-orange"
   >
     <div class="flex flex-col items-center justify-center h-full w-full bg-contain bg-no-repeat bg-center px-20 text-center max-w-sm min-h-[651px]" :style="{ backgroundImage: `url(${IntroBg})` }">
-      <div class="flex flex-col items-center gap-10 leading-tight text-sm">
+      <div class="flex flex-col items-center h-full justify-between min-h-[400px]">
+
         <img :src="IntroLogo" alt="Logo da Intro" class="w-20" >
-        <p>Estamos muito felizes em compartilhar este momento tão especial com você.</p>
-        <p>Depois de tantos momentos vividos juntos, chegou a hora de celebrar o início de um novo capítulo das nossas vidas.</p>
-        <p>Será uma alegria ter sua presença nesse dia tão importante.</p>
+        <div class="flex flex-col items-center gap-7 leading-tight text-sm">
+          <p>Estamos muito felizes em compartilhar este momento tão especial com você.</p>
+          <p>Depois de tantos momentos vividos juntos, chegou a hora de celebrar o início de um novo capítulo das nossas vidas.</p>
+          <p>Será uma alegria ter sua presença nesse dia tão importante.</p>
+        </div>
       </div>
     </div>
   </section>
