@@ -16,7 +16,7 @@
         <p class="font-extralight">Rodovia Admar Gonzaga, 3730 - Itacorubi, Florianópolis - SC, 88034-001</p>
         <p class="font-semibold">A partir das 18h</p>
         <p class="font-extralight">Estacionamento no local</p>
-        <Button class="w-full max-w-[200px] bg-transparent py-6 border-p4-light-orange/20 border mt-8" variant="outline" size="lg" as="a" href="https://maps.app.goo.gl/kt8KHErgMXE6MCUC9" target="_blank">VER NO MAPA</Button>
+        <Button class="w-full max-w-[200px] bg-transparent py-6 border-p4-light-orange/20 border mt-8" variant="outline" size="lg" as="a" href="https://maps.app.goo.gl/pvoNjfL8Jj1yzneo9" target="_blank">VER NO MAPA</Button>
       </div>
     </div>
   </section>
