@@ -44,6 +44,12 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-p2-dark-gray-brown: var(--p2-dark-gray-brown);
+  --color-p3-dark-gray: var(--p3-dark-gray);
+  --color-p4-light-orange: var(--p4-light-orange);
+  --color-p5-dark-gray: var(--p5-dark-gray);
+  --color-p6-dark-gray: var(--p6-dark-gray);
+  --color-p7-light-yellow: var(--p7-light-yellow);
   --color-hero-light-orange: var(--hero-light-orange);
   --color-intro-light-orange: var(--intro-light-orange);
   --color-intro-dark-gray-brown: var(--intro-dark-gray-brown);
@@ -89,6 +95,12 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --p2-dark-gray-brown: #504524;
+  --p3-dark-gray: #4d4d4d;
+  --p4-light-orange: #faf1e1;
+  --p5-dark-gray: #494949;
+  --p6-dark-gray: #494949;
+  --p7-light-yellow: #ebe9e0;
   --hero-light-orange: #faf1e1;
   --intro-light-orange: #dbd4c6;
   --intro-dark-gray-brown: #504524;
