@@ -3,7 +3,7 @@
     <DrawerContent>
       <div class="flex flex-col items-center gap-6 px-6 pb-10 pt-6 text-center">
         <DrawerHeader class="p-0">
-          <DrawerTitle class="text-lg font-semibold">Contribuir para a lua de mel 🌙</DrawerTitle>
+          <DrawerTitle class="text-lg font-semibold">Contribuir para a lua de mel</DrawerTitle>
           <DrawerDescription class="text-sm opacity-70">
             Use a chave Pix abaixo para fazer sua contribuição. Ficamos muito felizes com o carinho!
           </DrawerDescription>
