@@ -3,7 +3,7 @@
     <DrawerContent>
       <div class="flex flex-col items-center gap-6 px-6 pb-10 pt-6 text-center">
         <DrawerHeader class="p-0">
-          <DrawerTitle class="text-lg font-semibold">Contribuir para a lua de mel</DrawerTitle>
+          <DrawerTitle class="text-lg font-semibold">Contribuir para a lua de mel 🌙</DrawerTitle>
           <DrawerDescription class="text-sm opacity-70">
             Use a chave Pix abaixo para fazer sua contribuição. Ficamos muito felizes com o carinho!
           </DrawerDescription>
@@ -43,7 +43,7 @@
           <Transition name="fade">
             <div v-if="showQr" class="flex flex-col items-center gap-2 pt-1">
               <img
-                :src="qrCodeUrl"
+                :src="QrCodePix"
                 alt="QR Code Pix"
                 class="h-44 w-44 rounded-xl border border-p6-dark-gray/20 bg-white p-2"
               >
@@ -73,6 +73,7 @@ import {
   DrawerClose,
 } from '@/components/ui/drawer'
 import { Button } from '@/components/ui/button'
+import QrCodePix from '~/assets/new/qrcode-pix.png'
 
 const PIX_KEY = 'giuliadbem@gmail.com'
 
@@ -86,10 +87,6 @@ defineEmits<{
 
 const copied = ref(false)
 const showQr = ref(false)
-
-const qrCodeUrl = computed(() =>
-  `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(PIX_KEY)}`
-)
 
 async function copyKey() {
   try {
