@@ -5,5 +5,6 @@
     <SectionIgreja />
     <SectionRestaurante />
     <SectionInfo />
+    <SectionPresentes />
   </div>
 </template>

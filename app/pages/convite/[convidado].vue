@@ -5,7 +5,8 @@
       <SectionIntro />
       <SectionIgreja />
       <SectionRestaurante />
-      <SectionInfo />
+      <SectionPresentes />
+
 
       <Transition name="slide-up">
         <div
