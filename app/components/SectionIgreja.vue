@@ -28,8 +28,6 @@ import Pg3Fundo from '~/assets/new/pg3_fundo.webp'
 import Pg3Titulo from '~/assets/new/pg3_titulo.webp'
 import Pg3FotoIgreja from '~/assets/new/pg3_foto_igreja.webp'
 import Pg3IconeCanto from '~/assets/new/pg3_icone_canto.webp'
-import IgrejaTitulo from '~/assets/igreja-titulo.svg'
-import IgrejaDesenho from '~/assets/images/igreja-desenho.webp'
 import { Button } from '~/components/ui/button';
 
 </script>
