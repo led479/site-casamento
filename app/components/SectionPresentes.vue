@@ -12,16 +12,21 @@
           <p>Já dividimos a vida juntos há alguns anos, e hoje temos tudo o que precisamos para nosso lar.</p>
           <p>Se quiserem nos presentear, ficaremos muito felizes com uma contribuição para a nossa lua de mel.</p>
         </div>
-        <Button class="w-full max-w-[200px] bg-transparent py-6 border-p6-dark-gray/20 border mt-8" variant="outline" size="lg" as="a" href="https://maps.app.goo.gl/pvoNjfL8Jj1yzneo9" target="_blank">CONTRIBUIR</Button>
+        <Button class="w-full max-w-[200px] bg-transparent py-6 border-p6-dark-gray/20 border mt-8" variant="outline" size="lg" @click="pixOpen = true">
+          CONTRIBUIR
+        </Button>
       </div>
     </div>
   </section>
-</template>
 
+  <DrawerPix v-model:open="pixOpen" />
+</template>
 
 <script setup lang="ts">
 import Pg6Borda from '~/assets/new/pg6_borda.webp'
 import Pg6Fundo from '~/assets/new/pg6_fundo.webp'
 import Pg6Titulo from '~/assets/new/pg6_titulo-cropped.svg'
 import { Button } from '~/components/ui/button'
+
+const pixOpen = ref(false)
 </script>
