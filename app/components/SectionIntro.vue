@@ -1,23 +1,24 @@
 <template>
   <section
-    class="relative flex flex-col items-center justify-center w-full min-h-screen px-8 py-14 text-intro-dark-gray-brown bg-intro-light-orange"
+    class="relative flex flex-col items-center justify-center w-full min-h-screen px-8 py-14 text-p2-dark-gray-brown bg-cover" :style="{ backgroundImage: `url(${Pg2Fundo})` }"
   >
-    <div class="flex flex-col items-center justify-center h-full w-full bg-contain bg-no-repeat bg-center px-20 text-center max-w-sm min-h-[651px]" :style="{ backgroundImage: `url(${IntroBg})` }">
-      <div class="flex flex-col items-center h-full justify-between min-h-[400px]">
-
-        <img :src="IntroLogo" alt="Logo da Intro" class="w-20" >
-        <div class="flex flex-col items-center gap-7 leading-tight text-sm max-w-[162px]">
+    <div class="flex flex-col items-center  px-20 text-center max-w-sm gap-14">
+      <div class="flex flex-col items-center gap-10">
+        <img :src="Pg2Selo" alt="Logo da Intro" class="w-26" >
+        <div class="flex flex-col items-center gap-8 leading-tight">
           <p>Estamos muito felizes em compartilhar este momento tão especial com você.</p>
           <p>Depois de tantos momentos vividos juntos, chegou a hora de celebrar o início de um novo capítulo das nossas vidas.</p>
           <p>Será uma alegria ter sua presença nesse dia tão importante.</p>
         </div>
       </div>
+      <Pg2TextoEstilizado class="w-50 h-20" />
     </div>
   </section>
 </template>
 
 
 <script setup lang="ts">
-import IntroLogo from '~/assets/images/intro-logo.webp'
-import IntroBg from '~/assets/images/intro-bg.webp'
+import Pg2Fundo from '~/assets/new/pg2_fundo.webp'
+import Pg2Selo from '~/assets/new/pg2_selo.webp'
+import Pg2TextoEstilizado from '~/assets/new/pg2_texto_estilizado-cropped.svg'
 </script>
