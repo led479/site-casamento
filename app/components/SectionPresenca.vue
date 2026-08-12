@@ -14,9 +14,6 @@
         </div>
       </div>
     </div>
-    <Button class="w-full max-w-[200px] bg-transparent py-6 border-p7-light-yellow/20 border mt-3" variant="outline" size="lg" @click="pixOpen = true">
-      CONFIRMAR PRESENÇA
-    </Button>
   </section>
 </template>
 
@@ -24,7 +21,4 @@
 import Pg7Seda from '~/assets/new/pg7_seda.webp'
 import Pg7Fundo from '~/assets/new/pg7_fundo_exp.webp'
 import Pg7Titulo from '~/assets/new/pg7_titulo.webp'
-import { Button } from '~/components/ui/button'
-
-const pixOpen = ref(false)
 </script>
