@@ -5,14 +5,14 @@
     <div class="flex flex-col items-center h-full w-full bg-contain bg-no-repeat bg-center pt-24 text-center max-w-sm min-h-[500px]" :style="{ backgroundImage: `url(${Pg6Borda})` }">
       <div class="flex flex-col items-center gap-6 leading-tight text-sm">
         <div class="flex flex-col gap-2 items-center">
-          <Pg6Titulo class="w-40 h-7" />
+          <img :src="Pg6Titulo" alt="Sobre Presentes" width="224" >
         </div>
         <div class="flex flex-col items-center gap-5 max-w-[200px] text-center opacity-75">
           <p>O maior presente será poder compartilhar este dia com você.</p>
           <p>Já dividimos a vida juntos há alguns anos, e hoje temos tudo o que precisamos para nosso lar.</p>
           <p>Se quiserem nos presentear, ficaremos muito felizes com uma contribuição para a nossa lua de mel.</p>
         </div>
-        <Button class="w-full max-w-[200px] bg-transparent py-6 border-p6-dark-gray/20 border mt-8" variant="outline" size="lg" @click="pixOpen = true">
+        <Button class="w-full max-w-[200px] bg-transparent py-6 border-p6-dark-gray/20 border mt-3" variant="outline" size="lg" @click="pixOpen = true">
           CONTRIBUIR
         </Button>
       </div>
@@ -25,7 +25,7 @@
 <script setup lang="ts">
 import Pg6Borda from '~/assets/new/pg6_borda.webp'
 import Pg6Fundo from '~/assets/new/pg6_fundo.webp'
-import Pg6Titulo from '~/assets/new/pg6_titulo-cropped.svg'
+import Pg6Titulo from '~/assets/new/pg6_titulo.webp'
 import { Button } from '~/components/ui/button'
 
 const pixOpen = ref(false)
