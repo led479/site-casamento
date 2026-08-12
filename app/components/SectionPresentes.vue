@@ -1,13 +1,11 @@
 <template>
   <section
-    class="relative flex flex-col items-center justify-center w-full bg-cover bg-right px-8 py-14 text-p6-dark-gray" :style="{ backgroundImage: `url(${Pg6Fundo})` }"
+    class="relative flex flex-col items-center justify-center w-full bg-cover bg-center px-8 py-14 text-p6-dark-gray" :style="{ backgroundImage: `url(${Pg6Fundo})` }"
   >
     <div class="flex flex-col items-center h-full w-full bg-contain bg-no-repeat bg-center pt-24 text-center max-w-sm min-h-[500px]" :style="{ backgroundImage: `url(${Pg6Borda})` }">
       <div class="flex flex-col items-center gap-6 leading-tight text-sm">
-        <div class="flex flex-col gap-2 items-center">
-          <img :src="Pg6Titulo" alt="Sobre Presentes" width="224" >
-        </div>
-        <div class="flex flex-col items-center gap-5 max-w-[200px] text-center opacity-75">
+        <img :src="Pg6Titulo" alt="Sobre Presentes" width="224" >
+        <div class="flex flex-col items-center gap-5 max-w-[200px] opacity-75">
           <p>O maior presente será poder compartilhar este dia com você.</p>
           <p>Já dividimos a vida juntos há alguns anos, e hoje temos tudo o que precisamos para nosso lar.</p>
           <p>Se quiserem nos presentear, ficaremos muito felizes com uma contribuição para a nossa lua de mel.</p>

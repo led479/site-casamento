@@ -6,5 +6,6 @@
     <SectionRestaurante />
     <SectionInfo />
     <SectionPresentes />
+    <SectionPresenca />
   </div>
 </template>

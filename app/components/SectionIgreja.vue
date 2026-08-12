@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative flex flex-col items-center justify-center w-full pt-10 pb-20 text-p3-dark-gray" :style="{ backgroundImage: `url(${Pg3Fundo})` }"
+    class="relative flex flex-col items-center justify-center w-full bg-cover bg-center pt-10 pb-20 text-p3-dark-gray" :style="{ backgroundImage: `url(${Pg3Fundo})` }"
   >
     <img :src="Pg3IconeCanto" alt="Canto Estilizado" width="48" class="absolute left-3 top-5 rotate-y-180" >
     <img :src="Pg3IconeCanto" alt="Canto Estilizado" width="48" class="absolute right-3 top-5" >

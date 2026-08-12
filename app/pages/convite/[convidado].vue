@@ -6,7 +6,7 @@
       <SectionIgreja />
       <SectionRestaurante />
       <SectionPresentes />
-
+      <SectionPresenca />
 
       <Transition name="slide-up">
         <div

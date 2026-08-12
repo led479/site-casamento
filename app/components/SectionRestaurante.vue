@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative flex flex-col items-center justify-center w-full pt-10 pb-20 text-p4-light-orange" :style="{ backgroundImage: `url(${Pg4Fundo})` }"
+    class="relative flex flex-col items-center justify-center w-full pt-10 pb-20 bg-cover bg-center text-p4-light-orange" :style="{ backgroundImage: `url(${Pg4Fundo})` }"
   >
     <img :src="Pg4IconeCanto" alt="Canto Estilizado" width="48" class="absolute left-3 top-5" >
     <img :src="Pg4IconeCanto" alt="Canto Estilizado" width="48" class="absolute right-3 top-5 rotate-y-180" >
