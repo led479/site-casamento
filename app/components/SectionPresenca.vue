@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    <Button class="w-full max-w-[200px] bg-transparent py-6 border-p7-light-yellow/20 border" variant="outline" size="lg" @click="pixOpen = true">
+    <Button class="w-full max-w-[200px] bg-transparent py-6 border-p7-light-yellow/20 border mt-3" variant="outline" size="lg" @click="pixOpen = true">
       CONFIRMAR PRESENÇA
     </Button>
   </section>
