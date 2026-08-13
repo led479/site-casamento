@@ -1,12 +1,7 @@
 <template>
   <div class="flex flex-col items-center">
     <template v-if="grupo">
-      <SectionHero />
-      <SectionIntro />
-      <SectionIgreja />
-      <SectionRestaurante />
-      <SectionPresentes />
-      <SectionPresenca />
+      <AllSections />
 
       <Transition name="slide-up">
         <div
