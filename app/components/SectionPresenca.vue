@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative min-h-[90svh] flex flex-col items-center justify-center w-full bg-cover bg-center px-8 py-14 text-p7-light-yellow" :style="{ backgroundImage: `url(${Pg7Fundo})` }"
+    class="relative min-h-[100vh] flex flex-col items-center justify-center w-full bg-cover bg-center px-8 py-14 text-p7-light-yellow" :style="{ backgroundImage: `url(${Pg7Fundo})` }"
   >
     <div class="flex flex-col items-center h-full w-full bg-contain bg-no-repeat bg-center pt-46 text-center max-w-sm min-h-[650px]" :style="{ backgroundImage: `url(${Pg7Seda})` }">
       <div class="flex flex-col items-center gap-12 leading-tight text-sm">
