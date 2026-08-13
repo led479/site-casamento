@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative flex flex-col items-center justify-center w-full bg-cover bg-center px-8 py-14 text-p6-dark-gray" :style="{ backgroundImage: `url(${Pg6Fundo})` }"
+    class="relative min-h-[90svh] flex flex-col items-center justify-center w-full bg-cover bg-center px-8 py-14 text-p6-dark-gray" :style="{ backgroundImage: `url(${Pg6Fundo})` }"
   >
     <div class="flex flex-col items-center h-full w-full bg-contain bg-no-repeat bg-center pt-24 text-center max-w-sm min-h-[500px]" :style="{ backgroundImage: `url(${Pg6Borda})` }">
       <div class="flex flex-col items-center gap-6 leading-tight text-sm">

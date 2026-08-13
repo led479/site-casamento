@@ -9,7 +9,7 @@
 
     <div class="flex items-center text-center flex-col px-4">
       <img :src="Pg1TextoEstilizado" alt="Giulia e Rolf" width="330" >
-      <h1>TE CONVIDAM PARA O SEU CASAMENTO</h1>
+      <h1>CONVIDAM PARA O SEU CASAMENTO</h1>
     </div>
     <p class="absolute bottom-10 font-heading text-xs">24 de outubro de 2026</p>
   </section>
