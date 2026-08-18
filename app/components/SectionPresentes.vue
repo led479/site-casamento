@@ -1,5 +1,6 @@
 <template>
   <section
+    v-if="!isAnaEsther"
     class="relative min-h-[100vh] flex flex-col items-center justify-center w-full bg-cover bg-center px-8 py-14 text-p6-dark-gray" :style="{ backgroundImage: `url(${Pg6Fundo})` }"
   >
     <div class="flex flex-col items-center h-full w-full bg-contain bg-no-repeat bg-center pt-24 text-center max-w-sm min-h-[500px]" :style="{ backgroundImage: `url(${Pg6Borda})` }">
@@ -25,6 +26,16 @@ import Pg6Borda from '~/assets/new/pg6_borda.webp'
 import Pg6Fundo from '~/assets/new/pg6_fundo.webp'
 import Pg6Titulo from '~/assets/new/pg6_titulo.webp'
 import { Button } from '~/components/ui/button'
+
+const route = useRoute()
+
+const convidado = computed(() => {
+  const value = route.params.convidado
+  if (Array.isArray(value)) return value[0] ?? ''
+  return value ?? ''
+})
+
+const isAnaEsther = convidado.value.toLowerCase() === 'ana esther'
 
 const pixOpen = ref(false)
 </script>
