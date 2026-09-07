@@ -10,7 +10,7 @@
         </div>
         <div class="flex flex-col items-center gap-5 max-w-[200px] font-light">
           <p>Sua presença é muito importante<br> para nós!</p>
-          <p class="max-w-[150px]">Por favor, confirme até 05/09/2026 através do botão abaixo.</p>
+          <p class="max-w-[150px]">Por favor, confirme até 15/09/2026 através do botão abaixo.</p>
         </div>
       </div>
     </div>
