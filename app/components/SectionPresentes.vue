@@ -1,6 +1,6 @@
 <template>
   <section
-    v-if="!isAnaEsther"
+    v-if="!tirarSecaoPresentes"
     class="relative min-h-[100vh] flex flex-col items-center justify-center w-full bg-cover bg-center px-8 py-14 text-p6-dark-gray" :style="{ backgroundImage: `url(${Pg6Fundo})` }"
   >
     <div class="flex flex-col items-center h-full w-full bg-contain bg-no-repeat bg-center pt-24 text-center max-w-sm min-h-[500px]" :style="{ backgroundImage: `url(${Pg6Borda})` }">
@@ -35,7 +35,7 @@ const convidado = computed(() => {
   return value ?? ''
 })
 
-const isAnaEsther = convidado.value.toLowerCase() === 'ana esther'
+const tirarSecaoPresentes = (convidado.value.toLowerCase() === 'ana esther') || (convidado.value.toLowerCase() === 'cidinha')
 
 const pixOpen = ref(false)
 </script>
