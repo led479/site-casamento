@@ -192,5 +192,11 @@
     "convidados": [
       { "nome": "Marco" }
     ]
+  },
+  {
+    "convidados": [
+      { "nome": "Jaques" },
+      { "nome": "Wander" }
+    ]
   }
 ]
