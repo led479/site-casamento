@@ -14,7 +14,7 @@
       <div class="flex flex-col items-center text-center px-10 gap-7 opacity-75">
         <p class="uppercase font-semibold">Igreja Puríssimo Coração de Maria</p>
         <p class="font-extralight">Rua Arlíndo Pena, 85 - Santa Mônica, Florianópolis - SC, 88037-260</p>
-        <p class="font-semibold">24 de outubro de 2026, às 16h</p>
+        <p class="font-semibold">24 de outubro de 2026, às 15h30</p>
         <p class="font-extralight">Estacionamento no local</p>
         <Button class="w-full max-w-[200px] bg-transparent py-6 border-p3-dark-gray/20 border mt-8" variant="outline" size="lg" as="a" href="https://maps.app.goo.gl/kt8KHErgMXE6MCUC9" target="_blank">VER NO MAPA</Button>
       </div>
